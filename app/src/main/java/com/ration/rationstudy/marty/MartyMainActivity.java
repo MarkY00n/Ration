@@ -35,6 +35,7 @@ public class MartyMainActivity extends AppCompatActivity {
         adapter = new SimpleAdapter(this,R.layout.marty_listitem);
 
         adapter.setList(getChapter());
+        recyclerView.setAdapter(adapter);
 
     }
 

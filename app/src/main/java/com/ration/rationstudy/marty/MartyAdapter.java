@@ -34,8 +34,6 @@ public abstract class MartyAdapter<T,S extends MartyVH> extends RecyclerView.Ada
     }
 
     public void setList(ArrayList<T> t){
-        if (arrayList == null)
-            arrayList = new ArrayList<>();
         arrayList = t;
         notifyDataSetChanged();
     }
