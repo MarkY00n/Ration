@@ -1,5 +1,6 @@
 package com.ration.rationstudy;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -12,10 +13,14 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.ration.rationstudy.marty.MartyMainActivity;
+
 import java.lang.reflect.Member;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
+
+    private Context context = this;
 
     enum Members {
         Mark("Mark"),
@@ -63,6 +68,8 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case Marty:
                     Toast.makeText(MainActivity.this, "Marty", Toast.LENGTH_SHORT).show();
+                    intent = new Intent(context,MartyMainActivity.class);
+
                     break;
                 case h1008h:
                     Toast.makeText(MainActivity.this, "h1008h", Toast.LENGTH_SHORT).show();
