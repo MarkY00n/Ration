@@ -13,6 +13,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.ration.rationstudy.mark.MarkMainActivity;
 import com.ration.rationstudy.marty.MartyMainActivity;
 
 import java.lang.reflect.Member;
@@ -65,6 +66,7 @@ public class MainActivity extends AppCompatActivity {
             switch (members) {
                 case Mark:
                     Toast.makeText(MainActivity.this, "Mark", Toast.LENGTH_SHORT).show();
+                    intent = new Intent(context, MarkMainActivity.class);
                     break;
                 case Marty:
                     Toast.makeText(MainActivity.this, "Marty", Toast.LENGTH_SHORT).show();
