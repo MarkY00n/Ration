@@ -1,6 +1,7 @@
 package com.ration.rationstudy.mark.data;
 
 import com.ration.rationstudy.mark.chapters.Chapter01;
+import com.ration.rationstudy.mark.chapters.Chapter02;
 
 public class Subject {
 
@@ -18,6 +19,8 @@ public class Subject {
     public Class<?> getClassCode() {
         switch (chapter) {
             case Chapter01: classCode = Chapter01.class;
+            break;
+            case Chapter02: classCode = Chapter02.class;
             break;
         }
         return classCode;

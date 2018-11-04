@@ -1,7 +1,8 @@
 package com.ration.rationstudy.mark.data;
 
 public enum Chapter {
-    Chapter01("lambda");
+    Chapter01("lambda"),
+    Chapter02("Stream");
 
     private String title;
 

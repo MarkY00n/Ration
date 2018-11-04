@@ -48,6 +48,7 @@ public class MarkMainActivity extends BaseActivity {
         ArrayList<Subject> chapters = new ArrayList<>();
 
         chapters.add(new Subject(Chapter.Chapter01));
+        chapters.add(new Subject(Chapter.Chapter02));
 
         return chapters;
     }
