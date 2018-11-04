@@ -29,33 +29,13 @@ public class Chapter1_1 extends martyBaseActivity {
 
         // Question 1.
         btn.setOnClickListener(v -> Toast.makeText(mCon, "이부분을 람다로", Toast.LENGTH_SHORT).show());
-//        btn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Toast.makeText(mCon, "이부분을 람다로", Toast.LENGTH_SHORT).show();
-//            }
-//        });
+
         // Question 2.
         btn.setOnFocusChangeListener((v, b) -> Toast.makeText(mCon, "이 부분을 람다로", Toast.LENGTH_SHORT).show());
-//        btn.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-//            @Override
-//            public void onFocusChange(View view, boolean b) {
-//                Toast.makeText(mCon, "이 부분을 람다로", Toast.LENGTH_SHORT).show();
-//            }
-//        });
 
         // Question 3.
         onTouchListener = (v, motionEvent) -> false;
         btn.setOnTouchListener(onTouchListener);
-//        onTouchListener = new View.OnTouchListener() {
-//            @Override
-//            public boolean onTouch(View view, MotionEvent motionEvent) {
-//                Toast.makeText(mCon, "이 부분을 람다로", Toast.LENGTH_SHORT).show();
-//                return false;
-//            }
-//        };
-
-
     }
 }
 
