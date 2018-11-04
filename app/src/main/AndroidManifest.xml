@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.ration.rationstudy">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -16,7 +18,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <!-- Marty activity-->
+        <!-- Marty activity -->
         <activity android:name=".marty.MartyMainActivity" />
         <activity android:name=".marty.chapters.chapter1.Chapter1_1" />
         <activity android:name=".marty.chapters.chapter1.Chapter2_1" />
@@ -28,11 +30,9 @@
         <!-- Hani activity -->
         <activity android:name=".Hani.HaniMainActivity" />
         <activity android:name=".Hani.chapters.Chapter01" />
-
-        <activity android:name=".mark.chapters.Chapter02"></activity>
-
-        <activity android:name=".Hani.chapters.Chapter02"></activity>
-
+        <activity android:name=".mark.chapters.Chapter02" />
+        <activity android:name=".Hani.chapters.Chapter02" />
+        <activity android:name=".TestActivity"></activity>
     </application>
 
 </manifest>

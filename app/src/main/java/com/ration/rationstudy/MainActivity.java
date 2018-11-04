@@ -26,7 +26,8 @@ public class MainActivity extends AppCompatActivity {
     enum Members {
         Mark("Mark"),
         Marty("Marty"),
-        Hani("Hani");
+        Hani("Hani"),
+        HttpTestCode("http");
 
         private String title;
 
@@ -56,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
         memberArray.add(Members.Mark);
         memberArray.add(Members.Marty);
         memberArray.add(Members.Hani);
+        memberArray.add(Members.HttpTestCode);
     }
 
     MemberSelectListener memberSelectListener = members -> {
@@ -74,6 +76,9 @@ public class MainActivity extends AppCompatActivity {
             case Hani:
                 Toast.makeText(MainActivity.this, "Hani", Toast.LENGTH_SHORT).show();
                 intent = new Intent(context, HaniMainActivity.class);
+                break;
+            case HttpTestCode:
+                intent = new Intent(context, TestActivity.class);
                 break;
         }
 
