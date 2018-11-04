@@ -3,7 +3,6 @@ package com.ration.rationstudy.mark.chapters;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.Nullable;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -45,39 +44,27 @@ public class Chapter01 extends BaseActivity {
             }
         };
 
-        btn_q1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                int num1 = 0;
-                int num2 = 0;
-                if (et_num1 != null && et_num2 != null) {
-                    num1 = Integer.parseInt(et_num1.getText().toString());
-                    num2 = Integer.parseInt(et_num2.getText().toString());
-                }
-                int result = calc.add(num1, num2);
 
-                Toast.makeText(Chapter01.this, "result : " + result, Toast.LENGTH_SHORT).show();
+
+        btn_q1.setOnClickListener(v->
+        {
+            int num1 = 0;
+            int num2 = 0;
+            if (et_num1 != null && et_num2 != null) {
+                num1 = Integer.parseInt(et_num1.getText().toString());
+                num2 = Integer.parseInt(et_num2.getText().toString());
             }
+            int result = calc.add(num1, num2);
+
+            Toast.makeText(Chapter01.this, "result : " + result, Toast.LENGTH_SHORT).show();
         });
 
-        btn_q2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-               new Handler().postDelayed(new Runnable() {
-                   @Override
-                   public void run() {
-                       Toast.makeText(Chapter01.this, "3초 지남", Toast.LENGTH_SHORT).show();
-                   }
-               }, 3000);
-            }
+
+        btn_q2.setOnClickListener(v->{
+            new Handler().postDelayed(()->Toast.makeText(Chapter01.this, "3초 지남", Toast.LENGTH_SHORT).show(), 3000);
         });
 
-        btn_q3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(Chapter01.this, "버튼 클릭했음.", Toast.LENGTH_SHORT).show();
-            }
-        });
+        btn_q3.setOnClickListener(v-> Toast.makeText(Chapter01.this, "버튼 클릭했음.", Toast.LENGTH_SHORT).show());
     }
 
     interface Calc {
