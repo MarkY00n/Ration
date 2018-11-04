@@ -11,6 +11,8 @@ import android.widget.TextView;
 
 import com.ration.rationstudy.R;
 import com.ration.rationstudy.marty.Data.Subject;
+import com.ration.rationstudy.marty.common.MartyAdapter;
+import com.ration.rationstudy.marty.common.MartyVH;
 
 import java.util.ArrayList;
 
@@ -57,7 +59,7 @@ public class MartyMainActivity extends AppCompatActivity {
 }
 
 
-class SimpleVH extends MartyVH<Subject>{
+class SimpleVH extends MartyVH<Subject> {
     TextView tv;
     public SimpleVH(@NonNull View itemView) {
         super(itemView);
@@ -76,7 +78,7 @@ class SimpleVH extends MartyVH<Subject>{
     }
 }
 
-class SimpleAdapter extends MartyAdapter<Subject,SimpleVH>{
+class SimpleAdapter extends MartyAdapter<Subject,SimpleVH> {
     public SimpleAdapter(Context mCon, Integer mLayout) {
         super(mCon, mLayout);
     }
