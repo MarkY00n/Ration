@@ -17,11 +17,15 @@
             </intent-filter>
         </activity>
         <activity android:name=".marty.MartyMainActivity" />
-        <activity android:name=".marty.chapters.chapter1.Chapter1_1"></activity>
+        <activity android:name=".marty.chapters.chapter1.Chapter1_1" />
 
         <!-- Mark activity -->
-        <activity android:name=".mark.MarkMainActivity"/>
-        <activity android:name=".mark.chapters.Chapter01"/>
+        <activity android:name=".mark.MarkMainActivity" />
+        <activity android:name=".mark.chapters.Chapter01" />
+
+        <!-- Hani activity -->
+        <activity android:name=".Hani.HaniMainActivity" />
+        <activity android:name=".Hani.chapters.Chapter01" />
     </application>
 
 </manifest>
