@@ -58,30 +58,27 @@ public class MainActivity extends AppCompatActivity {
         memberArray.add(Members.Hani);
     }
 
-    MemberSelectListener memberSelectListener = new MemberSelectListener() {
-        @Override
-        public void onSelected(Members members) {
-            Intent intent = null;
+    MemberSelectListener memberSelectListener = members -> {
+        Intent intent = null;
 
-            switch (members) {
-                case Mark:
-                    Toast.makeText(MainActivity.this, "Mark", Toast.LENGTH_SHORT).show();
-                    intent = new Intent(context, MarkMainActivity.class);
-                    break;
-                case Marty:
-                    Toast.makeText(MainActivity.this, "Marty", Toast.LENGTH_SHORT).show();
-                    intent = new Intent(context, MartyMainActivity.class);
+        switch (members) {
+            case Mark:
+                Toast.makeText(MainActivity.this, "Mark", Toast.LENGTH_SHORT).show();
+                intent = new Intent(context, MarkMainActivity.class);
+                break;
+            case Marty:
+                Toast.makeText(MainActivity.this, "Marty", Toast.LENGTH_SHORT).show();
+                intent = new Intent(context, MartyMainActivity.class);
 
-                    break;
-                case Hani:
-                    Toast.makeText(MainActivity.this, "Hani", Toast.LENGTH_SHORT).show();
-                    intent = new Intent(context, HaniMainActivity.class);
-                    break;
-            }
+                break;
+            case Hani:
+                Toast.makeText(MainActivity.this, "Hani", Toast.LENGTH_SHORT).show();
+                intent = new Intent(context, HaniMainActivity.class);
+                break;
+        }
 
-            if (intent != null) {
-                startActivity(intent);
-            }
+        if (intent != null) {
+            startActivity(intent);
         }
     };
 
@@ -104,12 +101,7 @@ public class MainActivity extends AppCompatActivity {
         public void onBindViewHolder(@NonNull MemberHolder memberHolder, int i) {
             final Members member = memberArray.get(i);
             memberHolder.tv_member.setText(member.title);
-            memberHolder.itemView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    memberSelectListener.onSelected(member);
-                }
-            });
+            memberHolder.itemView.setOnClickListener(v -> memberSelectListener.onSelected(member));
         }
 
         @Override
