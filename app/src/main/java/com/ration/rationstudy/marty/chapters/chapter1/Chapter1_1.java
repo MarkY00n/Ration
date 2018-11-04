@@ -6,7 +6,7 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.ration.rationstudy.R;
-import com.ration.rationstudy.marty.martyBaseActivity;
+import com.ration.rationstudy.marty.common.martyBaseActivity;
 
 /**
  * User: Marty
