@@ -37,12 +37,7 @@ public class Chapter01 extends BaseActivity {
 
     @Override
     public void init() {
-        Calc calc = new Calc() {
-            @Override
-            public int add(int a, int b) {
-                return a + b;
-            }
-        };
+        Calc calc = (a,b) ->  a+b;
 
 
 
