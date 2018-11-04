@@ -26,7 +26,11 @@
         <!-- Hani activity -->
         <activity android:name=".Hani.HaniMainActivity" />
         <activity android:name=".Hani.chapters.Chapter01" />
+<<<<<<< Updated upstream
         <activity android:name=".mark.chapters.Chapter02"></activity>
+=======
+        <activity android:name=".Hani.chapters.Chapter02"></activity>
+>>>>>>> Stashed changes
     </application>
 
 </manifest>
