@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menu_asc"
+        android:title="오름차순"/>
+
+    <item
+        android:id="@+id/menu_desc"
+        android:title="내림차순"/>
+
+    <item
+        android:id="@+id/menu_even"
+        android:title="짝수"/>
+
+    <item
+        android:id="@+id/menu_odd"
+        android:title="홀수"/>
+</menu>

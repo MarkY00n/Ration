@@ -29,6 +29,10 @@ public abstract class MarkAdapter<T, S extends MarkViewHolder> extends RecyclerV
         notifyDataSetChanged();
     }
 
+    public ArrayList<T> getArrayList() {
+        return arrayList;
+    }
+
     @NonNull
     @Override
     public S onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {

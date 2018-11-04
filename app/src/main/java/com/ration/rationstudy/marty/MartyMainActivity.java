@@ -2,17 +2,15 @@ package com.ration.rationstudy.marty;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.TextView;
 
 import com.ration.rationstudy.R;
 import com.ration.rationstudy.marty.Data.Subject;
-import com.ration.rationstudy.marty.common.MartyAdapter;
-import com.ration.rationstudy.marty.common.MartyVH;
 
 import java.util.ArrayList;
 
@@ -59,7 +57,7 @@ public class MartyMainActivity extends AppCompatActivity {
 }
 
 
-class SimpleVH extends MartyVH<Subject> {
+class SimpleVH extends com.ration.rationstudy.marty.MartyVH<Subject> {
     TextView tv;
     public SimpleVH(@NonNull View itemView) {
         super(itemView);
@@ -78,7 +76,7 @@ class SimpleVH extends MartyVH<Subject> {
     }
 }
 
-class SimpleAdapter extends MartyAdapter<Subject,SimpleVH> {
+class SimpleAdapter extends com.ration.rationstudy.marty.MartyAdapter<Subject,SimpleVH> {
     public SimpleAdapter(Context mCon, Integer mLayout) {
         super(mCon, mLayout);
     }
