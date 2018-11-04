@@ -37,33 +37,21 @@ public class Chapter01 extends BaseActivity {
     @Override
     public void init() {
 
-        btn_01.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(Chapter01.this, "클릭함", Toast.LENGTH_SHORT).show();
+        btn_01.setOnClickListener(v -> Toast.makeText(this, "클릭함", Toast.LENGTH_SHORT).show());
+        btn_02.setOnClickListener(v -> {
+            if (edt_01.getText().toString().length() > 0) {
+                Toast.makeText(this, edt_01.getText().toString() + "", Toast.LENGTH_SHORT).show();
+            } else {
+                Toast.makeText(this, "입력값을 넣어주세여", Toast.LENGTH_SHORT).show();
             }
         });
-        btn_02.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (edt_01.getText().toString().length() > 0) {
-                    Toast.makeText(Chapter01.this, edt_01.getText().toString() + "", Toast.LENGTH_SHORT).show();
-
-                } else {
-                    Toast.makeText(Chapter01.this, "입력값을 넣어주세여", Toast.LENGTH_SHORT).show();
-                }
-            }
-        });
-        sw_btn_01.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean result) {
-                if (result) {
-                    Toast.makeText(Chapter01.this, "true", Toast.LENGTH_SHORT).show();
-                } else {
-                    Toast.makeText(Chapter01.this, "false", Toast.LENGTH_SHORT).show();
-                }
-            }
-        });
+        sw_btn_01.setOnCheckedChangeListener((compoundButton, result) -> {
+           if (result) {
+               Toast.makeText(this, "true", Toast.LENGTH_SHORT).show();
+           } else {
+               Toast.makeText(this, "false", Toast.LENGTH_SHORT).show();
+           }
+       });
 
     }
 
