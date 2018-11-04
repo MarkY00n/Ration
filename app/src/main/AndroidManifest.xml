@@ -16,8 +16,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <!-- Marty activity-->
         <activity android:name=".marty.MartyMainActivity" />
         <activity android:name=".marty.chapters.chapter1.Chapter1_1" />
+        <activity android:name=".marty.chapters.chapter1.Chapter2_1" />
 
         <!-- Mark activity -->
         <activity android:name=".mark.MarkMainActivity" />

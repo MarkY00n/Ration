@@ -1,4 +1,4 @@
-package com.ration.rationstudy.marty;
+package com.ration.rationstudy.marty.common;
 
 import android.content.Context;
 import android.support.annotation.NonNull;

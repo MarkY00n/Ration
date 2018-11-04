@@ -1,4 +1,4 @@
-package com.ration.rationstudy.marty;
+package com.ration.rationstudy.marty.common;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -8,7 +8,6 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import java.util.ArrayList;
-import java.util.zip.Inflater;
 
 /**
  * User: Marty

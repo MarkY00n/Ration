@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:id="@+id/single_search_edt"
+        android:inputType="numberDecimal"
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@+id/single_search_btn"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/single_search_btn"
+        android:text="Single"/>
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/single_search_btn"
+        android:id="@+id/baseline"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:inputType="numberDecimal"
+        android:layout_below="@id/single_search_btn"
+        android:layout_toLeftOf="@id/baseline"
+        android:layout_marginEnd="5dp"
+        android:id="@+id/range_search_edt1"
+
+        />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="5dp"
+        android:inputType="numberDecimal"
+        android:layout_toRightOf="@id/baseline"
+        android:layout_below="@id/single_search_btn"
+        android:id="@+id/range_search_edt2"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/range_search_edt1"
+        android:text="Range"
+        android:id="@+id/range_search_btn"
+        />
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_below="@id/range_search_btn"
+        android:layout_height="match_parent"
+        android:id="@+id/main_list"
+        app:layoutManager="android.support.v7.widget.LinearLayoutManager">
+
+    </android.support.v7.widget.RecyclerView>
+
+</RelativeLayout>
