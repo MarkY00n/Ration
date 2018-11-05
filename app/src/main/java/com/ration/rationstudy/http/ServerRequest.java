@@ -25,7 +25,7 @@ public class ServerRequest {
         return new OkHttpClient.Builder().addInterceptor(interceptor).build();
     }
 
-    public static ApiService getService() {
+    public static Retrofit getService() {
 
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(ApiService.URL)
@@ -34,6 +34,6 @@ public class ServerRequest {
                 .build();
 
 
-        return retrofit.create(ApiService.class);
+        return retrofit;
     }
 }

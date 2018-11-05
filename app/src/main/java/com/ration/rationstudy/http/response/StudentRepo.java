@@ -14,9 +14,9 @@ public class StudentRepo {
     @SerializedName("number")
     private String number;
     @SerializedName("grade")
-    private String grade;
+    private int grade;
     @SerializedName("year")
-    private String year;
+    private int year;
     @SerializedName("part")
     private String part;
 
@@ -32,11 +32,11 @@ public class StudentRepo {
         return number;
     }
 
-    public String getGrade() {
+    public int getGrade() {
         return grade;
     }
 
-    public String getYear() {
+    public int getYear() {
         return year;
     }
 

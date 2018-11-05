@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">RationStudy</string>
+    <string name="retry">다시 시도해주세요.</string>
 </resources>
