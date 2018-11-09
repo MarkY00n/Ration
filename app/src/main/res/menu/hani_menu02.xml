@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.sampledialogimage.MainActivity" >
+    <item
+        android:id="@+id/asc_menu"
+        android:title="오름차수"/>
+    <item
+        android:id="@+id/desc_menu"
+        android:title="내림차순"/>
+</menu>
+

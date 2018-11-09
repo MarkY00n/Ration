@@ -1,7 +1,7 @@
 package com.ration.rationstudy.Hani.data;
 
 public enum Chapter {
-    Chapter01("lambda"), Chapter02("Stream");
+    Chapter01("Lambda"), Chapter02("Stream"),Chapter03("StudyList");
 
     private String title;
 

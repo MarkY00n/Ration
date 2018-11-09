@@ -2,6 +2,7 @@ package com.ration.rationstudy.Hani.data;
 
 import com.ration.rationstudy.Hani.chapters.Chapter01;
 import com.ration.rationstudy.Hani.chapters.Chapter02;
+import com.ration.rationstudy.Hani.chapters.Chapter03;
 
 public class Subject {
 
@@ -18,10 +19,16 @@ public class Subject {
 
     public Class<?> getClassCode() {
         switch (chapter) {
-            case Chapter01: classCode = Chapter01.class;
-            break;
+            case Chapter01:
+                classCode = Chapter01.class;
+                break;
 
-            case Chapter02: classCode = Chapter02.class;
+            case Chapter02:
+                classCode = Chapter02.class;
+                break;
+
+            case Chapter03:
+                classCode = Chapter03.class;
                 break;
         }
         return classCode;

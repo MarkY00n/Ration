@@ -33,6 +33,7 @@
         <activity android:name=".Hani.chapters.Chapter01" />
         <activity android:name=".mark.chapters.Chapter02" />
         <activity android:name=".Hani.chapters.Chapter02" />
+        <activity android:name=".Hani.chapters.Chapter03" />
         <activity android:name=".TestActivity" />
         <activity android:name=".mark.chapters.Chapter03"></activity>
     </application>

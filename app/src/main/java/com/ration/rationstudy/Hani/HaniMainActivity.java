@@ -51,6 +51,7 @@ public class HaniMainActivity extends BaseActivity {
 
         chapters.add(new Subject(Chapter.Chapter01));
         chapters.add(new Subject(Chapter.Chapter02));
+        chapters.add(new Subject(Chapter.Chapter03));
         return chapters;
     }
 

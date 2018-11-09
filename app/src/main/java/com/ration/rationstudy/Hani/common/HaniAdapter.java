@@ -18,11 +18,13 @@ public abstract class HaniAdapter<T, S extends HaniViewHolder> extends RecyclerV
     public HaniAdapter(Context context, int resId){
         this.context = context;
         this.resId = resId;
+        arrayList = new ArrayList<>();
     }
 
     public Context getContext() {
         return context;
     }
+
     public void setItemList(ArrayList<T> array) {
         arrayList = array;
         notifyDataSetChanged();
@@ -41,4 +43,9 @@ public abstract class HaniAdapter<T, S extends HaniViewHolder> extends RecyclerV
     public int getItemCount() {
         return arrayList.size();
     }
+
+    public ArrayList<T> getArrayList() {
+        return arrayList;
+    }
+
 }
