@@ -49,6 +49,7 @@ public class MarkMainActivity extends BaseActivity {
 
         chapters.add(new Subject(Chapter.Chapter01));
         chapters.add(new Subject(Chapter.Chapter02));
+        chapters.add(new Subject(Chapter.Chapter03));
 
         return chapters;
     }
@@ -67,7 +68,7 @@ public class MarkMainActivity extends BaseActivity {
 
         @Override
         public void onBindViewHolder(@NonNull ChapterViewHolder chapterViewHolder, int i) {
-            chapterViewHolder.bindTo(getContext(), arrayList.get(i));
+            chapterViewHolder.bindTo(getContext(), getArrayList().get(i));
         }
     }
 

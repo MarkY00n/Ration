@@ -45,7 +45,7 @@ public class Chapter01 extends BaseActivity {
         {
             int num1 = 0;
             int num2 = 0;
-            if (et_num1 != null && et_num2 != null) {
+            if (et_num1.length() > 0 && et_num2.length() > 0) {
                 num1 = Integer.parseInt(et_num1.getText().toString());
                 num2 = Integer.parseInt(et_num2.getText().toString());
             }

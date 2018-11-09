@@ -5,10 +5,10 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
+        android:name=".common.RationAPP"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:name=".common.RationAPP"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
@@ -33,7 +33,8 @@
         <activity android:name=".Hani.chapters.Chapter01" />
         <activity android:name=".mark.chapters.Chapter02" />
         <activity android:name=".Hani.chapters.Chapter02" />
-        <activity android:name=".TestActivity"></activity>
+        <activity android:name=".TestActivity" />
+        <activity android:name=".mark.chapters.Chapter03"></activity>
     </application>
 
 </manifest>

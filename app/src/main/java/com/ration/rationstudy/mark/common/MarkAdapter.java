@@ -12,18 +12,20 @@ import java.util.ArrayList;
 
 public abstract class MarkAdapter<T, S extends MarkViewHolder> extends RecyclerView.Adapter<S> {
 
-    public ArrayList<T> arrayList;
+    private ArrayList<T> arrayList;
     private Context context;
     private int resId;
 
     public MarkAdapter(Context context, int resId){
         this.context = context;
         this.resId = resId;
+        arrayList = new ArrayList<>();
     }
 
     public Context getContext() {
         return context;
     }
+
     public void setItemList(ArrayList<T> array) {
         arrayList = array;
         notifyDataSetChanged();

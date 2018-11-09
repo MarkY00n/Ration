@@ -41,7 +41,7 @@ public class Chapter02 extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_chapter02);
+        setContentView(R.layout.mark_activity_chapter02);
 
         init();
     }
@@ -158,7 +158,7 @@ public class Chapter02 extends BaseActivity {
 
         @Override
         public void onBindViewHolder(@NonNull StreamDataViewHolder streamDataViewHolder, int i) {
-            streamDataViewHolder.bindTo(getContext(), arrayList.get(i));
+            streamDataViewHolder.bindTo(getContext(), getArrayList().get(i));
         }
     }
 
