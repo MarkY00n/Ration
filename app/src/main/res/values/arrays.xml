@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="search_requirement">
+        <item>ALL</item>
+        <item>학번</item>
+        <item>학년</item>
+        <item>이름</item>
+        <item>전공</item>
+        <item>성적</item>
+    </string-array>
+</resources>
