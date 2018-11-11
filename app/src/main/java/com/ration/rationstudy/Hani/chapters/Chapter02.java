@@ -120,7 +120,7 @@ public class Chapter02 extends BaseActivity {
                 return;
             }
             if (edit02_num > edit03_num) {
-                Toast.makeText(this, "범위에 맡게 숫자를 입력해주세요.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "범위에 맞게 숫자를 입력해주세요.", Toast.LENGTH_SHORT).show();
                 return;
             }
             adapter.clear();

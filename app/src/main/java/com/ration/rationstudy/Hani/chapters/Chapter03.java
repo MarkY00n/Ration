@@ -6,15 +6,12 @@ import android.support.annotation.NonNull;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.ration.rationstudy.Hani.common.BaseActivity;
 import com.ration.rationstudy.Hani.common.HaniAdapter;
@@ -25,9 +22,8 @@ import com.ration.rationstudy.http.ApiService;
 import com.ration.rationstudy.http.RationCallback;
 import com.ration.rationstudy.http.response.StudentRepo;
 
-
 import java.util.ArrayList;
-import java.util.Iterator;
+import java.util.stream.Stream;
 
 
 public class Chapter03 extends BaseActivity {
@@ -61,8 +57,9 @@ public class Chapter03 extends BaseActivity {
         api.listStudentRepo().enqueue(new RationCallback<>(this, (call, response) -> {
             if (response.body() != null) {
                 ArrayList<StudentRepo> repos = response.body().getResult();
-                Iterator<StudentRepo> iterator = repos.iterator();
-                adapter.setItemList(repos);
+                Stream<StudentRepo> stream;
+                stream = repos.stream().sorted();
+                adapter.setItemList((ArrayList<StudentRepo>) stream);
             }
         }));
     }
