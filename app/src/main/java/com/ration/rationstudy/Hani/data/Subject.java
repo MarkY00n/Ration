@@ -3,6 +3,7 @@ package com.ration.rationstudy.Hani.data;
 import com.ration.rationstudy.Hani.chapters.Chapter01;
 import com.ration.rationstudy.Hani.chapters.Chapter02;
 import com.ration.rationstudy.Hani.chapters.Chapter03;
+import com.ration.rationstudy.Hani.chapters.Chapter04;
 
 public class Subject {
 
@@ -29,6 +30,9 @@ public class Subject {
 
             case Chapter03:
                 classCode = Chapter03.class;
+                break;
+            case Chapter04:
+                classCode = Chapter04.class;
                 break;
         }
         return classCode;
