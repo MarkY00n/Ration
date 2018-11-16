@@ -9,6 +9,7 @@ import android.widget.Space;
 
 import com.jakewharton.rxbinding3.view.RxView;
 import com.ration.rationstudy.R;
+import com.ration.rationstudy.marty.common.MDEBUG;
 import com.ration.rationstudy.marty.common.martyBaseActivity;
 
 
@@ -26,7 +27,8 @@ public class Chapter4_marty extends martyBaseActivity {
     @BindView(R.id.next_btn)
     Button nextBtn;
 
-    int[] imgs;
+    Integer[] imgs = {R.drawable.chapter04_01,R.drawable.chapter04_02,R.drawable.chapter04_03,R.drawable.chapter04_04,R.drawable.chapter04_05
+    ,R.drawable.chapter04_06,R.drawable.chapter04_07};
 
     int currentPos;
     @Override
@@ -35,23 +37,19 @@ public class Chapter4_marty extends martyBaseActivity {
         setContentView(R.layout.activity_chapter4_marty);
         ButterKnife.bind(this);
 
-        imgs = getResources().getIntArray(R.array.chapter4_imgs);
         currentPos = imgs.length/2;
         galleryImg.setImageResource(imgs[currentPos]);
+        
+        Observable.merge(RxView.clicks(prevBtn).map(i->-1),RxView.clicks(nextBtn).map(i->1))
+                .subscribe(isNext->onMoveImages(isNext),onError-> MDEBUG.debug("RxBasic  Error : " + onError));
 
-
-        Observable<Integer> prev = RxView.clicks(prevBtn).map(isNext->-1);
-        Observable<Integer> next = RxView.clicks(prevBtn).map(isNext->1);
-
-        Observable.merge(prev,next)
-                .subscribe(isNext->onMoveImages(isNext));
     }
 
 
     void onMoveImages(int isNext){
+        currentPos += isNext;
         if (currentPos >= imgs.length) currentPos=0;
         else if (currentPos < 0 ) currentPos = imgs.length-1;
-        currentPos += isNext;
         galleryImg.setImageResource(imgs[currentPos]);
     }
 

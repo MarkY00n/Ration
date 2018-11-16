@@ -2,6 +2,7 @@ package com.ration.rationstudy.marty.Data;
 
 import com.ration.rationstudy.marty.chapters.chapter1.Chapter1_1;
 import com.ration.rationstudy.marty.chapters.chapter1.Chapter2_1;
+import com.ration.rationstudy.marty.chapters.chapter1.Chapter4_marty;
 
 /**
  * User: Marty
@@ -22,6 +23,7 @@ public class Subject {
         switch (oid){
             case CHAPTER_1_1 :c = Chapter1_1.class;break;
             case CHAPTER_2_1 :c = Chapter2_1.class;break;
+            case CHAPTER_4_1 :c = Chapter4_marty.class;break;
         }
         return c;
     }
