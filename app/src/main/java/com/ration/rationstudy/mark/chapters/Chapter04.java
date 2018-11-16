@@ -58,14 +58,14 @@ public class Chapter04 extends BaseActivity {
     }
 
     private Observable<Integer> getObservable() {
-        return Observable.create(emitter -> {
+        return Observable.create(observer -> {
            btn_pre.setOnClickListener(v -> {
                pos--;
-               emitter.onNext(getImage());
+               observer.onNext(getImage());
            });
            btn_next.setOnClickListener(v -> {
                pos++;
-               emitter.onNext(getImage());
+               observer.onNext(getImage());
            });
         });
     }
