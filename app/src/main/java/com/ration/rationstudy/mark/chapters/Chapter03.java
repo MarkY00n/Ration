@@ -233,7 +233,7 @@ public class Chapter03 extends BaseActivity {
 
         @Override
         public void bindTo(Context context, StudentRepo item) {
-            String format = String.format("학번 : %d", item.getNumber());
+            String format = String.format("학번 : %s", item.getNumber());
             tv_number.setText(format);
             format = String.format("학년 : %d", item.getYear());
             tv_year.setText(format);
