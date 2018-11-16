@@ -8,4 +8,14 @@
         <item>전공</item>
         <item>성적</item>
     </string-array>
+
+    <integer-array name="chapter4_imgs">
+        <item>@drawable/chapter04_01</item>
+        <item>@drawable/chapter04_02</item>
+        <item>@drawable/chapter04_03</item>
+        <item>@drawable/chapter04_04</item>
+        <item>@drawable/chapter04_05</item>
+        <item>@drawable/chapter04_06</item>
+        <item>@drawable/chapter04_07</item>
+    </integer-array>
 </resources>
