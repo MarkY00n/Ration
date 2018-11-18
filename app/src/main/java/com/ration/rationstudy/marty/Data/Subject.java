@@ -3,6 +3,7 @@ package com.ration.rationstudy.marty.Data;
 import com.ration.rationstudy.marty.chapters.chapter1.Chapter1_1;
 import com.ration.rationstudy.marty.chapters.chapter1.Chapter2_1;
 import com.ration.rationstudy.marty.chapters.chapter1.Chapter4_marty;
+import com.ration.rationstudy.marty.chapters.chapter1.Chapter3;
 
 /**
  * User: Marty
@@ -14,8 +15,8 @@ public class Subject {
 
     public final static int CHAPTER_1_1 = 1;
     public final static int CHAPTER_2_1 = 2;
+    public final static int CHAPTER_3_1 = 3;
     public final static int CHAPTER_4_1 = 4;
-
 
 
     public static Class<?> getActivity(int oid){
@@ -23,6 +24,7 @@ public class Subject {
         switch (oid){
             case CHAPTER_1_1 :c = Chapter1_1.class;break;
             case CHAPTER_2_1 :c = Chapter2_1.class;break;
+            case CHAPTER_3_1 :c = Chapter3.class;break;
             case CHAPTER_4_1 :c = Chapter4_marty.class;break;
         }
         return c;

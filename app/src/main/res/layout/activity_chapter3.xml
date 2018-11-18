@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:focusable="true"
+    android:clickable="true"
+    android:focusableInTouchMode="true">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/main_search_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableEnd="@drawable/sort_down"
+        android:drawablePadding="5dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignBottom="@id/main_search_rl"
+        android:textSize="22sp"
+        android:text="전체"
+        android:gravity="center"
+        android:layout_marginStart="15dp"
+        android:layout_alignParentStart="true"/>
+    <RelativeLayout
+        android:id="@+id/main_search_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:padding="10dp"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@id/main_search_btn"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/gray_radius">
+
+
+        <EditText
+            android:id="@+id/main_search_edt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:background="@null"
+            android:textSize="22sp"
+            android:layout_centerVertical="true"
+            android:imeOptions="actionSearch"
+            android:singleLine="true"
+            android:textColorHint="@color/edt_hint"
+            android:textColor="@color/black"
+            />
+
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/main_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp"
+        app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+        android:layout_below="@id/main_search_rl"
+        />
+
+
+</RelativeLayout>
+
+
+
+</android.support.design.widget.CoordinatorLayout>

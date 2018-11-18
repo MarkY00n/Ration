@@ -1,11 +1,13 @@
 package com.ration.rationstudy.http.response;
 
+import android.support.annotation.NonNull;
+
 import com.google.gson.annotations.SerializedName;
 
 /**
  * Created by Dev.Dec on 2018-11-05
  */
-public class StudentRepo {
+public class StudentRepo implements Comparable<String> {
 
     @SerializedName("oid")
     private String oid;
@@ -42,5 +44,10 @@ public class StudentRepo {
 
     public String getPart() {
         return part;
+    }
+
+    @Override
+    public int compareTo(@NonNull String o) {
+        return this.getNumber().compareTo(o);
     }
 }

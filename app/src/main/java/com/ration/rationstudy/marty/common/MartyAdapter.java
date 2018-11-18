@@ -17,7 +17,7 @@ import java.util.ArrayList;
  */
 public abstract class MartyAdapter<T,S extends MartyVH> extends RecyclerView.Adapter<S> {
 
-    public ArrayList<T> arrayList;
+    public ArrayList<T> arrayList = new ArrayList<>();
     private Context mCon;
     private LayoutInflater mInflater;
     private Integer mLayout;

@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">RationStudy</string>
     <string name="retry">다시 시도해주세요.</string>
+
+    <string name="tv1" formatted="false">학번 : %s</string>
+    <string name="tv2" formatted="false">학년 : %s</string>
+    <string name="tv3" formatted="false">이름 : %s</string>
+    <string name="tv4" formatted="false">전공 : %s</string>
+    <string name="tv5" formatted="false">성적 : %s</string>
 </resources>
