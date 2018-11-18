@@ -23,6 +23,8 @@
         <activity android:name=".marty.MartyMainActivity" />
         <activity android:name=".marty.chapters.chapter1.Chapter1_1" />
         <activity android:name=".marty.chapters.chapter1.Chapter2_1" />
+        <activity android:name=".marty.chapters.chapter1.Chapter3" />
+        <activity android:name=".marty.chapters.chapter1.Chapter4_marty" />
 
         <!-- Mark activity -->
         <activity android:name=".mark.MarkMainActivity" />
@@ -35,13 +37,11 @@
         <activity android:name=".Hani.HaniMainActivity" />
         <activity android:name=".Hani.chapters.Chapter01" />
 
-        <activity android:name=".mark.chapters.Chapter02" />
         <activity android:name=".Hani.chapters.Chapter02" />
         <activity android:name=".Hani.chapters.Chapter03" />
         <activity android:name=".Hani.chapters.Chapter04" />
         
         <activity android:name=".TestActivity" />
-        <activity android:name=".marty.chapters.chapter1.Chapter4_marty" />
     </application>
 
 </manifest>

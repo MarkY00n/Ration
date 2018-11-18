@@ -13,6 +13,7 @@ import android.view.inputmethod.EditorInfo;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.ration.rationstudy.R;
 import com.ration.rationstudy.common.RationAPP;
@@ -69,7 +70,7 @@ public class Chapter3 extends AppCompatActivity implements TextView.OnEditorActi
                 break;
         }
         mainSearchBtn.setText(text);
-        mainSearchBtn.setTag(p);
+        mainSearchEdt.setTag(p);
     };
 
     @Override
@@ -90,12 +91,24 @@ public class Chapter3 extends AppCompatActivity implements TextView.OnEditorActi
     @Override
     public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
         if (actionId == EditorInfo.IME_ACTION_SEARCH) {
+            String searchMsg = "";
+            final int pos = (int)mainSearchEdt.getTag();
+            try {
+                searchMsg = mainSearchEdt.getText().toString();
+            }catch (Exception e){
+                Toast.makeText(this, "검색어를 입력해주세요", Toast.LENGTH_SHORT).show();
+                return false;
+            }
+            final String MSG = searchMsg;
+
+            adapter.setList(items.stream().filter((obj)->obj.getParam(pos).startsWith(MSG))
+            .sorted((a,b)->a.compareTo(b.getNumber())).collect(Collectors.toCollection(ArrayList<StudentRepo>::new)));
+
 
             return true;
         }
         return false;
     }
-
     @OnClick(R.id.main_search_btn)
     public void onViewClicked() {
         BsDialog bottomSheetDialog = BsDialog.getInstance(callback);
@@ -106,13 +119,14 @@ public class Chapter3 extends AppCompatActivity implements TextView.OnEditorActi
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.marty_menu, menu);
+        getMenuInflater().inflate(R.menu.marty_menu2, menu);
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 
+        ArrayList<StudentRepo> items = adapter.arrayList;
         switch (item.getItemId()) {
             case R.id.menu_asc:
                 adapter.setList(items.stream().sorted((a, b) -> a.compareTo(b.getNumber())).collect(Collectors.toCollection(ArrayList<StudentRepo>::new)));

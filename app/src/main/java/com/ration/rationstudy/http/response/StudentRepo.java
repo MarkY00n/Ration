@@ -22,6 +22,27 @@ public class StudentRepo implements Comparable<String> {
     @SerializedName("part")
     private String part;
 
+    public String getParam(int pos){
+        String val = "";
+        switch (pos){
+            case 1 : // 학번
+                val =  number;
+            break;
+            case 2 : // 학년
+                val =  year+"";
+                break;
+            case 3 : // 성적
+                val =  grade+"";
+                break;
+            case 4 : // 전공
+                val =  part;
+                break;
+
+
+        }
+        return val;
+    }
+
     public String getOid() {
         return oid;
     }

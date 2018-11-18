@@ -47,7 +47,8 @@ public class MartyMainActivity extends AppCompatActivity {
     private ArrayList<Subject> getChapter(){
 
         ArrayList<Subject> array = new ArrayList<>();
-        Subject[] subjects = {new Subject("lambda_1",Subject.CHAPTER_1_1),new Subject("StreamBasic",Subject.CHAPTER_2_1),new Subject("Student Stream",Subject.CHAPTER_3_1)};
+        Subject[] subjects = {new Subject("lambda_1",Subject.CHAPTER_1_1),new Subject("StreamBasic",Subject.CHAPTER_2_1),new Subject("Student Stream",Subject.CHAPTER_3_1)
+                ,new Subject("Rxjava Basic",Subject.CHAPTER_4_1)};
 
         for (Subject sub : subjects){
             array.add(sub);
